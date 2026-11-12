@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workshop Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="banner">
+    <h1>Coding Workshop 2026</h1>
+    <p>Fill in your details to reserve your seat</p>
+  </header>
+
+  <main class="card">
+
+    <form id="regForm" novalidate>
+      <div class="grid">
+
+        <div class="field">
+          <label>Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name">
+          <span class="error" id="nameErr"></span>
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+          <span class="error" id="emailErr"></span>
+        </div>
+
+        <div class="field">
+          <label>Phone</label>
+          <input type="text" id="phone" name="phone" placeholder="10 digit number">
+          <span class="error" id="phoneErr"></span>
+        </div>
+
+        <div class="field">
+          <label>Date of Birth</label>
+          <input type="date" id="dob" name="dob">
+          <span class="error" id="dobErr"></span>
+        </div>
+
+        <div class="field">
+          <label>College / Institute</label>
+          <input type="text" id="college" name="college" placeholder="College name">
+          <span class="error" id="collegeErr"></span>
+        </div>
+
+        <div class="field">
+          <label>Year of Study</label>
+          <select id="year" name="year">
+            <option value="">Select year</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+          </select>
+          <span class="error" id="yearErr"></span>
+        </div>
+
+        <div class="field">
+          <label>Course</label>
+          <select id="course" name="course">
+            <option value="">Select a course</option>
+            <option>Web Development</option>
+            <option>Python Basics</option>
+            <option>Data Science</option>
+            <option>Cyber Security</option>
+          </select>
+          <span class="error" id="courseErr"></span>
+        </div>
+
+        <div class="field">
+          <label>Gender</label>
+          <div class="options">
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Other"> Other</label>
+          </div>
+          <span class="error" id="genderErr"></span>
+        </div>
+
+        <div class="field full">
+          <label>Skills You Know</label>
+          <div class="options">
+            <label><input type="checkbox" name="skills[]" value="HTML/CSS"> HTML/CSS</label>
+            <label><input type="checkbox" name="skills[]" value="JavaScript"> JavaScript</label>
+            <label><input type="checkbox" name="skills[]" value="Python"> Python</label>
+            <label><input type="checkbox" name="skills[]" value="Java"> Java</label>
+          </div>
+          <span class="error" id="skillsErr"></span>
+        </div>
+
+        <div class="field full">
+          <label>Address</label>
+          <textarea id="address" name="address" rows="3" placeholder="Your address"></textarea>
+          <span class="error" id="addressErr"></span>
+        </div>
+
+        <div class="field full">
+          <label class="terms">
+            <input type="checkbox" id="terms" name="terms"> I confirm that the details above are correct
+          </label>
+          <span class="error" id="termsErr"></span>
+        </div>
+
+        <div class="full">
+          <button type="submit">Submit Registration</button>
+        </div>
+
+      </div>
+    </form>
+
+    <div id="result"></div>
+
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
